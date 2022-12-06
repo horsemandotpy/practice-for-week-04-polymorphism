@@ -1,10 +1,14 @@
-const Person = require('./person');
+const Person = require("./person");
 
 class Student extends Person {
   constructor(firstName, lastName, major, GPA) {
     super(firstName, lastName);
     this.major = major;
     this.GPA = GPA;
+  }
+
+  introduce() {
+    return `Hello. I am ${this.firstName} ${this.lastName}, and I study ${this.major}.`;
   }
 
   static compareGPA(student1, student2) {
@@ -18,6 +22,8 @@ class Student extends Person {
   }
 }
 
+let student1 = new Student("billy", "johnson", "software-development", 3.2);
+console.log(student1.introduce());
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
 
